@@ -17,7 +17,7 @@
     <div class="btn-group" appDropdown>
       <button
         type="button"
-        class="btn btn-primary dropdown-toggle">
+        class="btn btn-primary dropdown-toggle" *ngIf="authService.isAuthenticated()">
         Manage Recipe<span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
@@ -25,6 +25,12 @@
         <li><a style="cursor: pointer" (click)="onEditRecipe()">Edit recipe</a></li>
         <li><a style="cursor: pointer" (click)="onDeleteRecipe()">Delete recipe</a></li>
       </ul>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-warning" (click)="onAddToShoppingList()" style="cursor: pointer">Add ingredients to
+        shopping
+        list
+      </button>
     </div>
   </div>
 </div>
