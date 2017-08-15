@@ -8,7 +8,7 @@ import {AuthService} from '../../auth/auth.service';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-  constructor(private dataService: DataStorageService, private authService: AuthService) {
+  constructor(private dataService: DataStorageService, public authService: AuthService) {
 
   }
 

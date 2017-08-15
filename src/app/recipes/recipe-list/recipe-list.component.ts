@@ -17,7 +17,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   constructor(private recipeService: RecipeService,
               private router: Router,
               private route: ActivatedRoute,
-              private authService: AuthService) {
+              public authService: AuthService) {
   }
 
   ngOnInit() {
